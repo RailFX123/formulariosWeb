@@ -1,3 +1,13 @@
+<?php
+require('./class.php');
+
+if (isset($_POST['user'])) {
+    $user= new User($_POST['user'], $_FILES['user']);
+    echo json_encode($user->expose());
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
